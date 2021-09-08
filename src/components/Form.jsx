@@ -37,7 +37,7 @@ export const AddUser = props => {
             <input type="email" name="email" value={user.email} onChange={handleChange}/>
             <label>Логин</label>
             <input type="text" name="login" value={user.login} onChange={handleChange}/>
-            <button onClick={(e)=>add(e)}>Add new user</button>
+            <button onClick={(e) => add(e)}>Add new user</button>
 
         </form>
     )

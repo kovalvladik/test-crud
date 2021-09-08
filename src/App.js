@@ -82,7 +82,7 @@ export const App = () => {
   const handleDelete=(id)=>{
     // setEdit(false)
     setUsers(users.filter(user => user.id !== id))
-    setModalActive({...modalActive, delete: false, idEl:null})
+    setModalActive({...modalActive, delete: false, idEl: null})
   }
   const updateUser = (id, updatedUser) => {
     setEdit(false)
