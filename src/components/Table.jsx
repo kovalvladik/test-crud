@@ -46,21 +46,5 @@ export const UserTable = props => (
             </tr>
         )}
         </tbody>
-        {/*<ModalPage setActive={setModalActive} active={modalActive.delete}>*/}
-        {/*<p className='text-form'>*/}
-        {/*    Удаление пользователя*/}
-        {/*</p>*/}
-        {/*<div className='button-container'>*/}
-        {/*    <button className='button-not-delete'*/}
-        {/*            onClick={() => setModalActive({...modalActive, delete: false})}>*/}
-        {/*        Отменить*/}
-        {/*    </button>*/}
-        {/*    <button className='button-delete' onClick={() => handleDelete(modalActive.id)}>*/}
-        {/*        Удалить*/}
-        {/*    </button>*/}
-        {/*</div>*/}
-
-
-    {/*</ModalPage>*/}
     </table>
 )
