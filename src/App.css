@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+@import-normalize;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Roboto", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+body {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 0;
+    color: #4d4d4d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app {
+    height: 100vw;
+    background-color: #E5E5E5;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar {
+    width: 100vw;
+    height: 56px;
+    background-color: #353D4B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 258px;
+    background: white;
 }
+
+.button-delete{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a73e8;
+    position: relative;
+    overflow:hidden;
+    vertical-align: top;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    z-index: 5;
+    left: 12rem;
+}
+.button-not-delete{
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #D3D3D3;
+    position: relative;
+    overflow:hidden;
+    vertical-align: top;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    z-index: 1;
+}
+.text-form{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    top: 3rem;
+}
+.button-container{
+    /*background-color: #F8F8F8;*/
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+
+.button-add {
+
+    position: relative;
+    background-color: #209eec;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 15px;
+    width: 170px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    left: 90vh;
+    bottom: 3rem;
+}
+.title {
+
+    margin-right: 50rem;
+}
+
+

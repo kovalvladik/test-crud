@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import CloseIcon from "./icons/CloseIcon";
+import CloseIcon from "../icons/CloseIcon";
+import './../../style/Form.css'
+
 
 export const EditUser = props => {
     const [user, setUser] = useState(props.currentUser)
@@ -26,7 +28,7 @@ export const EditUser = props => {
                 props.setModalActive(false)
             }}
         >
-            <button className='icon-button' onClick={() => props.setModalActive(false)}>
+            <button className='button-icon' onClick={() => props.setModalActive(false)}>
                 <CloseIcon/>
             </button>
             <label>Фамилия</label>
@@ -36,10 +38,10 @@ export const EditUser = props => {
             <label>Отчество</label>
             <input type="text" name="thirdName" value={user.thirdName} onChange={handleChange}/>
             <label>E-mail</label>
-            <input type="email" name="email" value={user.email} onChange={handleChange}/>
+            <input type="text" name="email" value={user.email} onChange={handleChange}/>
             <label>Логин</label>
             <input type="text" name="login" value={user.login} onChange={handleChange}/>
-            <button>Сохранить</button>
+            <button className='button-add-in-form'>Сохранить</button>
             {/*<button onClick={() => props.setEdit(false)} className="button muted-button">*/}
             {/*    Cancel*/}
             {/*</button>*/}

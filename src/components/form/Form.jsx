@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import CloseIcon from "./icons/CloseIcon";
+import CloseIcon from "../icons/CloseIcon";
+import './../../style/Form.css'
+
 
 export const AddUser = props => {
     const initFormState = {id: null, secondName: '', primaryName: '', thirdName: '', email: '', login: ''}
@@ -25,7 +27,7 @@ export const AddUser = props => {
                 props.setModalActive({...props.modalActive, add: false})
             }}
         >
-            <button className='icon-button' onClick={() => props.setModalActive(false)}>
+            <button className='button-icon' onClick={() => props.setModalActive(false)}>
                 <CloseIcon/>
             </button>
             <label>Фамилия</label>
@@ -37,7 +39,7 @@ export const AddUser = props => {
             <input type="text" name="thirdName" value={user.thirdName}
                    required onChange={handleChange}/>
             <label>E-mail</label>
-            <input type="email" name="email" value={user.email}
+            <input type="text" name="email" value={user.email}
                    required onChange={handleChange}/>
             <label>Логин</label>
             <input type="text" name="login" value={user.login}
@@ -46,7 +48,7 @@ export const AddUser = props => {
             || user.primaryName === ''
             || user.thirdName === '' ||
             user.email === '' ||
-            user.login === '' ? true : false} onClick={(e) => add(e)}>Add new user
+            user.login === '' ? true : false} onClick={(e) => add(e)} className='button-add-in-form'>Add new user
             </button>
 
         </form>

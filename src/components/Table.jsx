@@ -1,8 +1,11 @@
 import React from 'react';
+import DeleteIcon from "./icons/DeleteIcon";
+import RenameIcons from "./icons/RenameIcon";
+import '../style/Table.css'
 
 export const UserTable = props => (
-    <table>
-        <thead>
+    <table className='table'>
+        <thead className='table'>
         <tr>
             <th>Фамилия</th>
             <th>Имя</th>
@@ -23,19 +26,19 @@ export const UserTable = props => (
                     <td>{user.login}</td>
                     <td>
                         <button
-                            // onClick={() => props.setModalActive({...props.modalActive, refactor: true})}
                             onClick={() => {
                                 props.editRow(user)
                             }}
-                            className=""
+                            className="button-not-delete"
                         >
-                            Edit
+                           <RenameIcons/>
                         </button>
                         <button
                             onClick={() => props.delUser(user.id)}
-                            className=""
+                            className="button-not-delete"
                         >
-                            Delete
+                            <DeleteIcon/>
+
                         </button>
                     </td>
                 </tr>

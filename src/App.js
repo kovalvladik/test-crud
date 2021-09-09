@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState} from "react";
-import {EditUser} from "./components/EditForm";
-import {AddUser} from "./components/Form";
+import {EditUser} from "./components/form/EditForm";
+import {AddUser} from "./components/form/Form";
 import {UserTable} from "./components/Table";
 import ModalPage from "./components/ModalPage";
 
@@ -105,39 +105,43 @@ export const App = () => {
     }
 
     return (
-        <>
-            <div className='title'>
-                Пользователи
-                <button className='button-add' onClick={ee}>
-                    + Добавить
-                </button>
-            </div>
-            <UserTable users={users} editRow={editRow} delUser={delUser} setModalActive={setModalActive}
-                       modalActive={modalActive}/>
-            <ModalPage setActive={setModalActive} active={modalActive.refactor}>
-                <EditUser edit={edit} setEdit={setEdit} currentUser={currentUser} updateUser={updateUser}
-                          setModalActive={setModalActive}
-                          modalActive={modalActive}
-                />
-            </ModalPage>
-            <ModalPage setActive={setModalActive} active={modalActive.add}>
-                <AddUser addUser={addUser} setModalActive={setModalActive} setAllError={setAllError} allError={allError}
-                         modalActive={modalActive}/>
-            </ModalPage>
-            <ModalPage setActive={setModalActive} active={modalActive.delete}>
-                <p className='text-form'>
-                    Удаление пользователя
-                </p>
-                <div className='button-container'>
-                    <button className='button-not-delete'
-                            onClick={() => setModalActive({...modalActive, delete: false})}>
-                        Отменить
-                    </button>
-                    <button className='button-delete' onClick={() => handleDelete(modalActive.idEl)}>
-                        Удалить
+        < div className='app'>
+            <div className='navbar'/>
+            <div className='content'>
+                <div className='title'>
+                    Пользователи
+                    <button className='button-add' onClick={ee}>
+                        + Добавить
                     </button>
                 </div>
-            </ModalPage>
-        </>
+                <UserTable users={users} editRow={editRow} delUser={delUser} setModalActive={setModalActive}
+                           modalActive={modalActive}/>
+                <ModalPage setActive={setModalActive} active={modalActive.refactor} title={'Редактирование пользователя'}>
+                    <EditUser edit={edit} setEdit={setEdit} currentUser={currentUser} updateUser={updateUser}
+                              setModalActive={setModalActive}
+                              modalActive={modalActive}
+                    />
+                </ModalPage>
+                <ModalPage setActive={setModalActive} active={modalActive.add} title={'Создание пользователя'}>
+                    <AddUser addUser={addUser} setModalActive={setModalActive} setAllError={setAllError} allError={allError}
+                             modalActive={modalActive}/>
+                </ModalPage>
+                <ModalPage setActive={setModalActive} active={modalActive.delete} title={'Удаление пользователя'}>
+                    <p className='text-form'>
+                        Удалить выбранного пользователя?
+                    </p>
+                    <div className='button-container'>
+                        <button className='button-not-delete'
+                                onClick={() => setModalActive({...modalActive, delete: false})}>
+                            Отменить
+                        </button>
+                        <button className='button-delete' onClick={() => handleDelete(modalActive.idEl)}>
+                            Удалить
+                        </button>
+                    </div>
+                </ModalPage>
+            </div>
+
+        </div>
     );
 }
