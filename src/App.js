@@ -64,6 +64,7 @@ export const App = () => {
     refactor:false,
     idEl : null,
   })
+  const [allError, setAllError] = useState(true)
 
 
 
@@ -106,12 +107,16 @@ export const App = () => {
   // // onClick={() => {
   // //     props.editRow(user)
   // // }}
+  const ee = () => {
+    setAllError(false)
+    setModalActive({...modalActive, add: true})
+  }
 
   return (
       <>
         <div className='title'>
           Пользователи
-          <button className='button-add' onClick={() => setModalActive({...modalActive, add: true})}>
+          <button className='button-add' onClick={ee}>
             + Добавить
           </button>
         </div>
@@ -122,7 +127,7 @@ export const App = () => {
         />
         </ModalPage>
         <ModalPage setActive={setModalActive} active={modalActive.add}>
-          <AddUser addUser={addUser} setModalActive={setModalActive}/>
+          <AddUser addUser={addUser} setModalActive={setModalActive} setAllError={setAllError} allError={allError} modalActive={modalActive}/>
         </ModalPage>
         <ModalPage setActive={setModalActive} active={modalActive.delete}>
           <p className='text-form'>
