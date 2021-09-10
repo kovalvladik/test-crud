@@ -1,0 +1,86 @@
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__content {
+
+}
+
+.modal__delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 36px;
+}
+
+.modal__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal__button {
+    padding: 8px 48px 8px 48px;
+    border-radius: 6px;
+}
+
+.submit {
+    background-color: #4587ED;
+    color: white;
+}
+
+.cancel {
+    background-color: #E4E5E8;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: solid 1px;
+}
+
+.button-add-in-form {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin: 0 15px 15px 0;
+    outline: none;
+    border: solid 1px;
+    border-radius: 4px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    background-color: #1a73e8;
+    position: relative;
+    overflow: hidden;
+    vertical-align: top;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+    z-index: 1;
+    left: 20rem;
+}
+
+
+.button-icon {
+    font-size: 10px;
+    border: none;
+    background-color: white;
+    position: relative;
+    bottom: 5rem;
+    left: 35rem;
+    cursor: pointer;
+    padding: 0 15px;
+    margin: 10px 0 5px 0;
+    background-color: #353D4B;
+
+
+}

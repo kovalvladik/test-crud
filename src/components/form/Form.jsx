@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import CloseIcon from "../icons/CloseIcon";
 import './../../style/Form.css'
 
@@ -22,8 +22,6 @@ export const AddUser = props => {
         <form
             onSubmit={event => {
                 event.preventDefault()
-                // props.addUser(user)
-                // setUser(initFormState)
                 props.setModalActive({...props.modalActive, add: false})
             }}
         >
@@ -48,7 +46,8 @@ export const AddUser = props => {
             || user.primaryName === ''
             || user.thirdName === '' ||
             user.email === '' ||
-            user.login === '' ? true : false} onClick={(e) => add(e)} className='button-add-in-form'>Add new user
+            user.login === '' ? true : false} onClick={(e) => add(e)}
+                    className='button-add-in-form'>Add new user
             </button>
 
         </form>

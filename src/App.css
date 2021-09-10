@@ -46,7 +46,7 @@ body {
     background: white;
 }
 
-.button-delete{
+.button-delete {
     display: inline-block;
     box-sizing: border-box;
     padding: 0 15px;
@@ -62,16 +62,17 @@ body {
     color: #fff;
     background-color: #1a73e8;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     vertical-align: top;
     cursor: pointer;
     user-select: none;
     appearance: none;
     touch-action: manipulation;
     z-index: 5;
-    left: 12rem;
+    left: 2rem;
 }
-.button-not-delete{
+
+.button-not-delete {
     display: inline-block;
     box-sizing: border-box;
     padding: 0 15px;
@@ -87,29 +88,31 @@ body {
     color: #fff;
     background-color: #D3D3D3;
     position: relative;
-    overflow:hidden;
+    overflow: hidden;
     vertical-align: top;
     cursor: pointer;
     user-select: none;
     appearance: none;
     touch-action: manipulation;
     z-index: 1;
+
 }
-.text-form{
+
+.text-form {
     display: flex;
     align-content: center;
     justify-content: center;
     top: 3rem;
 }
-.button-container{
+
+.button-container {
     /*background-color: #F8F8F8;*/
-    position: relative;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-items: center;
 }
 
 .button-add {
-
     position: relative;
     background-color: #209eec;
     border: none;
@@ -125,9 +128,17 @@ body {
     left: 90vh;
     bottom: 3rem;
 }
+
 .title {
 
     margin-right: 50rem;
+}
+
+.text-form {
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 

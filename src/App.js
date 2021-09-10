@@ -96,10 +96,6 @@ export const App = () => {
         })
     }
 
-    // onClick={() => props.setModalActive({...props.modalActive, refactor: true})}
-    // // onClick={() => {
-    // //     props.editRow(user)
-    // // }}
     const ee = () => {
         setModalActive({...modalActive, add: true})
     }
@@ -116,20 +112,24 @@ export const App = () => {
                 </div>
                 <UserTable users={users} editRow={editRow} delUser={delUser} setModalActive={setModalActive}
                            modalActive={modalActive}/>
-                <ModalPage setActive={setModalActive} active={modalActive.refactor} title={'Редактирование пользователя'}>
+                <ModalPage setActive={setModalActive} active={modalActive.refactor}
+                           title={'Редактирование пользователя'}>
                     <EditUser edit={edit} setEdit={setEdit} currentUser={currentUser} updateUser={updateUser}
                               setModalActive={setModalActive}
                               modalActive={modalActive}
                     />
                 </ModalPage>
                 <ModalPage setActive={setModalActive} active={modalActive.add} title={'Создание пользователя'}>
-                    <AddUser addUser={addUser} setModalActive={setModalActive} setAllError={setAllError} allError={allError}
+                    <AddUser addUser={addUser} setModalActive={setModalActive} setAllError={setAllError}
+                             allError={allError}
                              modalActive={modalActive}/>
                 </ModalPage>
                 <ModalPage setActive={setModalActive} active={modalActive.delete} title={'Удаление пользователя'}>
-                    <p className='text-form'>
-                        Удалить выбранного пользователя?
-                    </p>
+                    <div className='text-form'>
+                        <p>
+                            Удалить выбранного пользователя?
+                        </p>
+                    </div>
                     <div className='button-container'>
                         <button className='button-not-delete'
                                 onClick={() => setModalActive({...modalActive, delete: false})}>
